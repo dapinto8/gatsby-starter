@@ -125,8 +125,8 @@ const HomePage = () => {
             {docLink.text}
           </a>
         </li>
-        {links.map(link => (
-          <li style={{ ...listItemStyles, color: link.color }}>
+        {links.map((link,i) => (
+          <li key={i} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
