@@ -14,13 +14,13 @@ module.exports = {
     author: '@dapinto8',
   },
   plugins: [
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: `@import '${__dirname}/src/styles/global.scss';`,
         cssLoaderOptions: {
           importLoaders: 1,
-          sourceMap:  !isProduction,
+          sourceMap: !isProduction,
           localIdentName: isProduction ? '[hash:base64:5]' : '[name]__[local]___[hash:base64:5]'
         }
       }
